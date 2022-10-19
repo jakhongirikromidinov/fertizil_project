@@ -1,0 +1,8 @@
+{
+	"navbar":[
+	  {"title":"Бош сахифа", "path":"/"},
+	  {"title":"Эркаклар учун", "path":"/male"},
+	  {"title":"Аёллар учун", "path":"/female"},
+	  {"title":"Биз билан алоқа", "path":"#footer"}
+	]
+}

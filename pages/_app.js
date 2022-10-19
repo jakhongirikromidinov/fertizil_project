@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import GlobalStyle from "../styles/Global.styled";
+import { appWithTranslation } from "next-i18next";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+	return (
+		<>
+			<Component {...pageProps} />
+
+			<GlobalStyle />
+		</>
+	);
 }
 
-export default MyApp
+export default appWithTranslation(MyApp);
