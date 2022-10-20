@@ -124,10 +124,10 @@ export const Content = styled.div`
 			content: "";
 			display: block;
 			position: absolute;
-			top: 62px;
-			right: -53px;
-			width: 13.4rem;
-			height: 18rem;
+			top: 50px;
+			right: -14px;
+			width: 199%;
+			height: 123%;
 			background: url("/images/section_female_drop.png") center center / cover
 				no-repeat;
 			@media screen and (max-width: 1439px) {
