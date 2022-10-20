@@ -15,7 +15,7 @@ const StyledFeatures = styled.ul`
 
 	li {
 		color: black;
-		padding: 1.5em;
+		padding: 1.7em;
 
 		svg {
 			font-size: 4.5rem;
@@ -23,12 +23,40 @@ const StyledFeatures = styled.ul`
 		}
 
 		h3 {
+			font-size: 1.8rem;
 			margin-bottom: 0.5em;
 		}
 
 		p {
-			line-height: 1.4;
+			font-size: 1.6rem;
 			color: #777;
+		}
+	}
+	@media screen and (max-width: 1250px) {
+		width: 85%;
+	}
+	@media screen and (max-width: 1100px) {
+		li {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 1.3em;
+			h3 {
+				text-align: center;
+			}
+			p {
+				display: none;
+			}
+		}
+		justify-content: space-around;
+		bottom: -20px;
+	}
+	@media screen and (max-width: 600px) {
+		bottom: -50px;
+		li {
+			h3 {
+				font-size: 1.6rem;
+			}
 		}
 	}
 `;

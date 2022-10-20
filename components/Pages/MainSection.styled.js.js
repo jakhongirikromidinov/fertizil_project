@@ -3,11 +3,10 @@ import styled from "styled-components";
 const StyledMainSection = styled.section`
 	position: relative;
 	overflow: ${({ type }) =>
-		type === "male" ? "visible hidden" : "hidden visible"};
+		type === "male" ? "hidden" : "hidden visible"};
 	min-height: 100vh;
 	.straight {
 		display: flex;
-
 		.feature_item_1_descr {
 			max-width: 35rem;
 		}
@@ -47,7 +46,7 @@ const StyledMainSection = styled.section`
 	// Styling background circles
 	// Start line
 	.left {
-		top: 125px;
+		top: 70px;
 		left: 45px;
 		@media screen and (max-width: 900px) {
 			top: 50px;
@@ -106,10 +105,10 @@ export const Content = styled.div`
 			content: "";
 			display: block;
 			position: absolute;
-			top: 64px;
-			right: -23px;
-			width: 250%;
-			height: 140%;
+			top: 50px;
+			right: -12px;
+			width: 199%;
+			height: 123%;
 			background: url("/images/section_drop.png") center center / cover
 				no-repeat;
 		}
@@ -187,12 +186,12 @@ export const Text = styled.div`
 	div {
 		color: var(--primary100);
 		font-size: 3.8rem;
+		line-height: 110%;
 		font-weight: var(--bold);
 		margin-bottom: 1.4rem;
 	}
 	p {
 		font-size: 2.1rem;
-		line-height: 145%;
 		margin-bottom: 2rem;
 	}
 	@media screen and (max-width: 1115px) {
@@ -234,11 +233,10 @@ export const FeatureItem = styled.div`
 		color: var(--primary100);
 		margin-bottom: 1rem;
 		font-weight: 400;
-		font-size: 4.8rem;
+		font-size: 4.5rem;
 	}
 	p {
 		font-size: 1.6rem;
-		line-height: 145%;
 	}
 	ul {
 		list-style-type: disc;

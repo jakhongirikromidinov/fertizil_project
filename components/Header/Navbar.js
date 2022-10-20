@@ -21,13 +21,12 @@ import StyledNavbar, {
 } from "./Navbar.styled";
 import { Container, Logo, LogoOriginal } from "../common/Common.styled";
 import LangDropdown from "./LangDropdown";
-import { Dropdown, Navbar_chevron } from "../common/Common";
+import { Dropdown } from "../common/Common";
 
-export const Navbar = ({ data }) => {
+export const Navbar = () => {
 	const router = useRouter();
 
 	const { t } = useTranslation();
-	console.log(t("common"));
 	//Nav Sidebar
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -49,7 +48,12 @@ export const Navbar = ({ data }) => {
 			<Container>
 				<Content>
 					<Logo>
-						<Image src={LogoPic} alt="logo image" objectFit="contain" className="transparent" />
+						<Image
+							src={LogoPic}
+							alt="logo image"
+							objectFit="contain"
+							className="transparent"
+						/>
 					</Logo>
 					<LogoOriginal>
 						<Image
@@ -62,13 +66,14 @@ export const Navbar = ({ data }) => {
 
 					<LangDropdown />
 					<NavbarList>
-						{t("common:navbar", { returnObjects: true }).map(
-							(item, index) => (
-								<li key={index} className={item.path === router.pathname ? "bold" : ""}>
-									<Link href={item.path}>{item.title}</Link>
-								</li>
-							)
-						)}
+						{t("common:navbar", { returnObjects: true }).map((item, index) => (
+							<li
+								key={index}
+								className={item.path === router.pathname ? "bold" : ""}
+							>
+								<Link href={item.path}>{item.title}</Link>
+							</li>
+						))}
 					</NavbarList>
 
 					<NavbarBurger>

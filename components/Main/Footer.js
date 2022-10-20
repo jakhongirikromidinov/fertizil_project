@@ -34,7 +34,7 @@ const Footer = () => {
 			<Container>
 				<Content>
 					<Company>
-						<LogoOriginal>
+						<LogoOriginal show>
 							<Image
 								src={LogoPicOriginal}
 								alt="logo image"

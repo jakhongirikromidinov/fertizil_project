@@ -40,6 +40,7 @@ export const Circle1 = styled.div`
 	height: 505px;
 `;
 export const Logo = styled.div`
+	cursor: pointer;
 	@media screen and (max-width: 1200px) {
 		width: 200px;
 	}
@@ -51,13 +52,20 @@ export const Logo = styled.div`
 	}
 `;
 export const LogoOriginal = styled.div`
-	display: none;
+	display: ${({ show }) => (show ? "block" : "none")};
 	@media screen and (max-width: 1000px) {
 		width: 140px;
 	}
 	@media screen and (max-width: 800px) {
 		display: block;
 		align-self: flex-start;
+		width: 110px;
+		transform: translateY(20%);
+		
+	}
+	@media screen and (max-width: 360px) {
+		width: 90px;
+		transform: translateY(25%);
 	}
 `;
 

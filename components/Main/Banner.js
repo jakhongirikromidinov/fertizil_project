@@ -35,8 +35,7 @@ const Banner = () => {
 						<TitleDescr>{t("banner:banner_descr")}</TitleDescr>
 					</Title>
 
-					<Main>
-					</Main>
+					<Main></Main>
 
 					<Buttons>
 						<BannerButton>
@@ -52,8 +51,8 @@ const Banner = () => {
 							src="/images/Banner_happy_family.png"
 							alt="family image"
 							objectFit="contain"
-							width={822}
-							height={875}
+							width={740}
+							height={787.5}
 						/>
 					</FamilyImage>
 				</Content>

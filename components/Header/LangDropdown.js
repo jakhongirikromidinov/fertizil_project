@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import { useRouter } from "next/router";
 
+import { NavbarChevron, NavbarGlobe } from "../common/Common";
+
 import Link from "next/link";
 
 import {
@@ -9,10 +11,8 @@ import {
 	LangDropDownList,
 	LangDropDownVariant,
 	LangDropDownChosen,
-	GlobeIcon,
+	StyledIcons
 } from "./LangDropdown.styled";
-
-import { Navbar_chevron } from "../common/Common";
 
 const LangDropdown = () => {
 	const [isDropDownOpen, setIsDropDownOpen] = useState(false);
@@ -32,18 +32,21 @@ const LangDropdown = () => {
 
 	return (
 		<LangDropDown>
-			<GlobeIcon />
+			<StyledIcons className="reverse">
+				<NavbarGlobe />
+			</StyledIcons>
+
 			<LangDropDownChosen>
 				{chosenLang}
 				<LangDropDownList className="list">
-					{router.locale === 'uz' && (
+					{router.locale === "uz" && (
 						<LangDropDownVariant onClick={handleChangingLang}>
 							<Link href={router.pathname} locale={router.locales[0]}>
 								Русский
 							</Link>
 						</LangDropDownVariant>
 					)}
-					{router.locale === 'ru' && (
+					{router.locale === "ru" && (
 						<LangDropDownVariant onClick={handleChangingLang}>
 							<Link href={router.pathname} locale={router.locales[1]}>
 								Ўзбекча
@@ -52,8 +55,9 @@ const LangDropdown = () => {
 					)}
 				</LangDropDownList>
 			</LangDropDownChosen>
-			{/* <DropdownIcon className="arrow" /> */}
-			<Navbar_chevron />
+			<StyledIcons className="rotate">
+				<NavbarChevron />
+			</StyledIcons>
 		</LangDropDown>
 	);
 };

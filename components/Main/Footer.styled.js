@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { BsInstagram, BsTelegram, BsFacebook } from "react-icons/bs";
 
 const StyledFooter = styled.footer`
-	min-height: 42rem;
+	min-height: 27rem;
 	position: relative;
 	padding: 0 5rem;
 	margin-top: 16rem;

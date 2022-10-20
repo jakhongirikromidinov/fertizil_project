@@ -20,6 +20,7 @@ const StyledNavbar = styled.nav`
 
 export const Content = styled.div`
 	display: flex;
+	position: relative;
 	align-items: center;
 	justify-content: space-between;
 `;
@@ -29,11 +30,22 @@ export const NavbarList = styled.ul`
 	gap: 3.2rem;
 	font-size: 1.8rem;
 	color: var(--white);
-	li:hover {
-		color: var(--accent);
+	li:not(.bold) {
+		a {
+			opacity: 0.7;
+		}
+	}
+	li {
+		a:hover {
+			opacity: 1;
+			transition: 0.3s ease-in-out;
+		}
 	}
 	@media screen and (max-width: 1200px) {
 		font-size: clamp(1.5rem, 1.5vw, 1.8rem);
+	}
+	@media screen and (max-width: 950px) {
+		gap: 1.4rem;
 	}
 	@media screen and (max-width: 800px) {
 		display: none;

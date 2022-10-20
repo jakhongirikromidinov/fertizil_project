@@ -53,4 +53,10 @@ export const Content = styled.div`
 	}
 `;
 
+export const CircleWrapper = styled.div`
+	position: absolute;
+	top: 0;
+	right: 0;
+`;
+
 export default StyledReviews;

@@ -73,6 +73,9 @@ const GlobalStyle = createGlobalStyle`
 	.hidden {
 		overflow: hidden;
 	}
+	p {
+		line-height: 145%;
+	}
 `;
 
 export default GlobalStyle;

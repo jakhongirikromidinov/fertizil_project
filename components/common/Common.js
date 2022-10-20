@@ -1,6 +1,15 @@
+//core
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+//i18n
+import { useTranslation } from "next-i18next";
+
+//src
 import { AiOutlineClose } from "react-icons/ai";
 
+//styles
 import Header from "../Header/Header";
 import Footer from "../Main/Footer";
 import {
@@ -11,7 +20,6 @@ import {
 	CloseIcon,
 	ImageWrapper,
 } from "./Common.styled";
-
 import { Circle5, Circle4, Circle3, Circle2, Circle1 } from "./Common.styled";
 
 export const Layout = ({ children, footer }) => {
@@ -19,7 +27,7 @@ export const Layout = ({ children, footer }) => {
 		<>
 			<Header />
 			<main>{children}</main>
-			{footer && <Footer id="footer"/>}
+			{footer && <Footer id="footer" />}
 		</>
 	);
 };
@@ -37,25 +45,26 @@ export const Circle = () => {
 	);
 };
 
-export const Dropdown = ({ links, isOpen, toggle }) => {
+export const Dropdown = ({ isOpen }) => {
+	const router = useRouter();
+	const { t } = useTranslation();
 	return (
 		<BurgerMenu isOpen={isOpen}>
 			<BurgerMenuList>
-				{links.map((link, index) => {
-					return (
-						<li key={index}>
-							<a href={link.path} onClick={toggle}>
-								{link.title}
-							</a>
-						</li>
-					);
-				})}
+				{t("common:navbar", { returnObjects: true }).map((item, index) => (
+					<li
+						key={index}
+						className={item.path === router.pathname ? "bold" : ""}
+					>
+						<Link href={item.path}>{item.title}</Link>
+					</li>
+				))}
 			</BurgerMenuList>
 		</BurgerMenu>
 	);
 };
 
-export const MakeDots = ({ amount, male, female }) => {
+export const MakeDots = ({ amount, male }) => {
 	let pieces = Array(amount).fill(null);
 
 	return (
@@ -152,15 +161,61 @@ export const Tab_icon_4 = () => {
 	);
 };
 
-export const Navbar_chevron = () => {
+export const NavbarChevron = () => {
 	return (
-		<>
-		</>
+		<svg
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M6 9L12 15L18 9"
+				stroke="white"
+				strokeWidth="2"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+			/>
+		</svg>
+	);
+};
+
+export const NavbarGlobe = () => {
+	return (
+		<svg
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+				stroke="white"
+				strokeWidth="2"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+			/>
+			<path
+				d="M2 12H22"
+				stroke="white"
+				strokeWidth="2"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+			/>
+			<path
+				d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z"
+				stroke="white"
+				strokeWidth="2"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+			/>
+		</svg>
 	);
 };
 
 export const Modal = ({ clickedImg, handleClick }) => {
-
 	return (
 		<Overlay>
 			<ImageWrapper>
