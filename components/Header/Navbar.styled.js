@@ -32,13 +32,13 @@ export const NavbarList = styled.ul`
 	color: var(--white);
 	li:not(.bold) {
 		a {
+			transition: 0.3s ease-in-out;
 			opacity: 0.7;
 		}
 	}
 	li {
 		a:hover {
 			opacity: 1;
-			transition: 0.3s ease-in-out;
 		}
 	}
 	@media screen and (max-width: 1200px) {
@@ -60,5 +60,13 @@ export const NavbarBurger = styled.div`
 	@media screen and (max-width: 800px) {
 		display: block;
 	}
+`;
+
+export const NavbarPhone = styled.a`
+	font-size: 1.6rem;
+	color: var(--white);
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
 `;
 export default StyledNavbar;

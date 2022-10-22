@@ -8,14 +8,16 @@ export const LangDropDown = styled.div`
 	font-size: 1.8rem;
 	cursor: pointer;
 	gap: 0.1rem;
+	.rotate, .reverse {
+		transition: 0.3s ease-in-out;
+	}
 	:hover {
 		.rotate {
 			transform: rotate(180deg);
-			transition: 0.3s ease-in-out;
 		}
 		.reverse {
 			transform: scaleX(-1);
-			transition: 0.3s ease-in-out;
+
 		}
 		.list {
 			opacity: 1;

@@ -12,12 +12,14 @@ import { Rotate as Hamburger } from "hamburger-react";
 import LogoPic from "../../public/images/Navbar_logo.png";
 import LogoPicOriginal from "../../public/images/Navbar_logo_original.png";
 import { MenuData } from "../../data/data";
+import { NavbarPhoneIcon } from "../common/Common";
 
 // components
 import StyledNavbar, {
 	NavbarList,
 	Content,
 	NavbarBurger,
+	NavbarPhone,
 } from "./Navbar.styled";
 import { Container, Logo, LogoOriginal } from "../common/Common.styled";
 import LangDropdown from "./LangDropdown";
@@ -63,8 +65,6 @@ export const Navbar = () => {
 							className="original"
 						/>
 					</LogoOriginal>
-
-					<LangDropdown />
 					<NavbarList>
 						{t("common:navbar", { returnObjects: true }).map((item, index) => (
 							<li
@@ -75,6 +75,13 @@ export const Navbar = () => {
 							</li>
 						))}
 					</NavbarList>
+
+					<LangDropdown />
+
+					<NavbarPhone href="tel:+998981112211">
+						<NavbarPhoneIcon />
+						+998 (98) 111-22-11
+					</NavbarPhone>
 
 					<NavbarBurger>
 						<Hamburger

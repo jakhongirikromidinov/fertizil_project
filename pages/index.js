@@ -1,12 +1,11 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Banner from "../components/Main/Banner";
-import { Layout } from "../components/common/Common"
-
+import { Layout } from "../components/common/Common";
 export default function Home() {
 	return (
 		<Layout>
-			<Banner />
+			<Banner spermIcons />
 		</Layout>
 	);
 }
@@ -17,4 +16,3 @@ export async function getStaticProps({ locale }) {
 		},
 	};
 }
-

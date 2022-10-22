@@ -2,7 +2,6 @@
 	"navbar":[
 	  {"title":"Главная", "path":"/"},
 	  {"title":"Для мужчин", "path":"/male"},
-	  {"title":"Для женщин", "path":"/female"},
-	  {"title":"Контакты", "path":"#footer"}
+	  {"title":"Для женщин", "path":"/female"}
 	]
 }

@@ -8,26 +8,25 @@ import { useTranslation } from "next-i18next";
 //container
 import { Container } from "../common/Common.styled";
 
-import Features from "./Features";
-
 //styles
 import StyledBanner, {
 	Content,
 	Title,
 	TitleDescr,
 	Main,
+	MainFeature,
 	Buttons,
 	BannerButton,
 	FamilyImage,
 } from "./Banner.styled";
 
-const Banner = () => {
+const Banner = ({ spermIcons }) => {
 	// function for internalisation
 	const { t } = useTranslation();
 
 	//DOM render start
 	return (
-		<StyledBanner id="Banner">
+		<StyledBanner id="Banner" icons={spermIcons}>
 			<Container>
 				<Content>
 					<Title>
@@ -35,7 +34,12 @@ const Banner = () => {
 						<TitleDescr>{t("banner:banner_descr")}</TitleDescr>
 					</Title>
 
-					<Main></Main>
+					<Main>
+						<MainFeature>
+							<h3>{t("banner:feature_title")}</h3>
+							<p>{t("banner:feature_descr")}</p>
+						</MainFeature>
+					</Main>
 
 					<Buttons>
 						<BannerButton>
@@ -51,13 +55,12 @@ const Banner = () => {
 							src="/images/Banner_happy_family.png"
 							alt="family image"
 							objectFit="contain"
-							width={740}
-							height={787.5}
+							width={1021}
+							height={922}
 						/>
 					</FamilyImage>
 				</Content>
 			</Container>
-			<Features />
 		</StyledBanner>
 	);
 };

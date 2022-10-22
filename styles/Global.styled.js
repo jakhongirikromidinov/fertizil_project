@@ -5,13 +5,12 @@ const GlobalStyle = createGlobalStyle`
 		--accent: #18C7FF;
 		--accent100: #ED2291; 
 		--primary100: #005077;
+		--pinksecondary: #F06BA8;
 		--black: #000000;
 		--white: #FFFFFF;
-		--pinksecondary: #F06BA8;
-		--textdark: #211c1c;
-		
-		--buttonGradient: linear-gradient(77.8deg, #12C6FF -18.11%, #1472FF 72%);
-		--backgroundGradient: linear-gradient(265.86deg, #A0CDDC -27.21%, #007EBB 53.23%);
+
+
+		--backgroundGradient: linear-gradient(308.67deg, rgba(0, 196, 239, 0.78) 0%, #1790FF 68.64%);
 		--bold: 700;
 		--regular: 400;
 	}

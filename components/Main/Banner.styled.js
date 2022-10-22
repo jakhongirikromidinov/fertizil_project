@@ -3,19 +3,23 @@ import styled from "styled-components";
 const StyledBanner = styled.section`
 	position: relative;
 	color: var(--white);
-	background: radial-gradient(
-		circle,
-		rgba(0, 191, 244, 1) 5%,
-		rgba(36, 63, 204, 1) 100%
-	);
+	overflow: hidden;
+	background: ${({ icons }) =>
+		icons
+			? 'url("/images/banner_sperm.png") center right -100px / contain no-repeat, var(--backgroundGradient);'
+			: "var(--backgroundGradient)"};
+	@media screen and (max-width: 1250px) {
+		background-position: center right -150px, 0;
+	}
+	@media screen and (max-width: 1100px) {
+		background: var(--backgroundGradient);
+	}
 `;
 
 export const Content = styled.div`
 	padding-top: 19rem;
-	position: relative;
-	height: 80vh;
-	width: 100%;
-	overflow: hidden;
+	/* position: relative; */
+	height: 100vh;
 	@media screen and (max-width: 1100px) {
 		display: flex;
 		overflow: hidden;
@@ -29,8 +33,7 @@ export const Content = styled.div`
 
 export const Title = styled.div`
 	h1 {
-		margin-bottom: 1.5rem;
-		font-size: 12rem;
+		font-size: 13.8rem;
 		text-indent: -7px;
 		letter-spacing: -3px;
 	}
@@ -50,7 +53,18 @@ export const Title = styled.div`
 export const TitleDescr = styled.p`
 	font-size: 2.1rem;
 	line-height: 135%;
-	max-width: 55rem;
+	max-width: 45rem;
+	margin-bottom: 6rem;
+	position: relative;
+	::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		bottom: -20px;
+		left: 0;
+		background: var(--white);
+	}
 `;
 export const Main = styled.div`
 	margin-bottom: 5rem;
@@ -58,20 +72,33 @@ export const Main = styled.div`
 		display: none;
 	}
 `;
-export const MainLeft = styled.div`
-	width: 50%;
-`;
-
-export const MainRight = styled.div`
-	width: 50%;
+export const MainFeature = styled.div`
+	max-width: 41.3rem;
+	margin-bottom: 7.3rem;
+	h3 {
+		font-size: 3.2rem;
+		font-weight: 600;
+		margin-bottom: 1.6rem;
+	}
+	p {
+		font-size: 1.8rem;
+	}
+	@media screen and (max-width: 1100px) {
+		text-align: center;
+	}
 `;
 
 export const FamilyImage = styled.div`
 	position: absolute;
 	bottom: -70px;
-	right: 110px;
-	@media screen and (max-width: 1250px) {
-		right: 50px;
+	right: -4px;
+	z-index: 1;
+	pointer-events: none;
+	@media screen and (max-width: 1300px) {
+		right: -100px;
+	}
+	@media screen and (max-width: 1160px) {
+		right: -160px;
 	}
 	@media screen and (max-width: 1100px) {
 		right: 50%;
@@ -104,9 +131,9 @@ export const BannerButton = styled.button`
 	background-color: transparent;
 	a {
 		display: block;
-		font-size: 1.6rem;
-		border-radius: 10rem;
-		padding: 1em 3.25em;
+		font-size: 1.8rem;
+		border-radius: 2.4rem;
+		padding: 0.8em 2em;
 		border: 1px solid white;
 		cursor: pointer;
 		:hover {

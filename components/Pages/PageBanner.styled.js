@@ -3,7 +3,10 @@ import styled from "styled-components";
 const StyledPageBanner = styled.section`
 	position: relative;
 	overflow: hidden;
-	background: ${({ type }) => type === "male" ? "radial-gradient(circle, rgba(0, 191, 244, 1) 5%, rgba(36, 63, 204, 1) 100%);" : "linear-gradient(265.86deg, #f993d1 -27.21%, #ed2291 53.23%);"}
+	background: ${({ type }) =>
+		type === "male"
+			? "radial-gradient(circle, rgba(0, 191, 244, 1) 5%, rgba(36, 63, 204, 1) 100%);"
+			: "radial-gradient( circle,rgb(252 85 140 / 97%) 0%,rgba(255,0,153,1) 100% );"};
 `;
 
 export const Content = styled.div`
@@ -24,6 +27,7 @@ export const Main = styled.div``;
 export const PageTitle = styled.h2`
 	font-size: 8.4rem;
 	padding-top: 11rem;
+	margin-bottom: 2rem;
 	@media screen and (max-width: 1200px) {
 		font-size: clamp(5rem, 7vw, 8.4rem);
 	}
