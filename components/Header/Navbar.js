@@ -23,7 +23,7 @@ import StyledNavbar, {
 } from "./Navbar.styled";
 import { Container, Logo, LogoOriginal } from "../common/Common.styled";
 import LangDropdown from "./LangDropdown";
-import { Dropdown } from "../common/Common";
+import { Sidebar } from "../common/Common";
 
 export const Navbar = () => {
 	const router = useRouter();
@@ -50,20 +50,24 @@ export const Navbar = () => {
 			<Container>
 				<Content>
 					<Logo>
-						<Image
-							src={LogoPic}
-							alt="logo image"
-							objectFit="contain"
-							className="transparent"
-						/>
+						<Link href="/">
+							<Image
+								src={LogoPic}
+								alt="logo image"
+								objectFit="contain"
+								className="transparent"
+							/>
+						</Link>
 					</Logo>
 					<LogoOriginal>
-						<Image
-							src={LogoPicOriginal}
-							alt="logo image"
-							objectFit="contain"
-							className="original"
-						/>
+						<Link href="/">
+							<Image
+								src={LogoPicOriginal}
+								alt="logo image"
+								objectFit="contain"
+								className="original"
+							/>
+						</Link>
 					</LogoOriginal>
 					<NavbarList>
 						{t("common:navbar", { returnObjects: true }).map((item, index) => (
@@ -91,7 +95,7 @@ export const Navbar = () => {
 						/>
 					</NavbarBurger>
 
-					<Dropdown toggle={toggle} links={MenuData} isOpen={isOpen} />
+					<Sidebar toggle={toggle} links={MenuData} isOpen={isOpen} />
 				</Content>
 			</Container>
 		</StyledNavbar>

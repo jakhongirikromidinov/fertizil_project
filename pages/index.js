@@ -5,7 +5,7 @@ import { Layout } from "../components/common/Common";
 export default function Home() {
 	return (
 		<Layout>
-			<Banner spermIcons />
+			<Banner />
 		</Layout>
 	);
 }

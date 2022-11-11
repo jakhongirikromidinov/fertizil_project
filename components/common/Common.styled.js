@@ -53,6 +53,7 @@ export const Logo = styled.div`
 `;
 export const LogoOriginal = styled.div`
 	display: ${({ show }) => (show ? "block" : "none")};
+	cursor: pointer;
 	@media screen and (max-width: 1000px) {
 		width: 140px;
 	}
@@ -61,7 +62,6 @@ export const LogoOriginal = styled.div`
 		align-self: flex-start;
 		width: 110px;
 		transform: translateY(20%);
-		
 	}
 	@media screen and (max-width: 360px) {
 		width: 90px;
@@ -72,7 +72,7 @@ export const LogoOriginal = styled.div`
 export const BurgerMenu = styled.div`
 	position: fixed;
 	overflow: hidden;
-	z-index: 4;
+	z-index: -1;
 	margin-top: 8.8rem;
 	width: 100%;
 	height: 100vh;

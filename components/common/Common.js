@@ -45,7 +45,7 @@ export const Circle = () => {
 	);
 };
 
-export const Dropdown = ({ isOpen }) => {
+export const Sidebar = ({ isOpen }) => {
 	const router = useRouter();
 	const { t } = useTranslation();
 	return (
@@ -59,6 +59,14 @@ export const Dropdown = ({ isOpen }) => {
 						<Link href={item.path}>{item.title}</Link>
 					</li>
 				))}
+				<li>
+					{router.locale === "uz" && (
+						<a href="tel:+998981112211">Биз билан алоқа</a>
+					)}
+					{router.locale === "ru" && (
+						<a href="tel:+998981112211">Связаться с нами</a>
+					)}
+				</li>
 			</BurgerMenuList>
 		</BurgerMenu>
 	);

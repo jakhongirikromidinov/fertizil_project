@@ -35,11 +35,13 @@ const Footer = () => {
 				<Content>
 					<Company>
 						<LogoOriginal show>
-							<Image
-								src={LogoPicOriginal}
-								alt="logo image"
-								objectFit="contain"
-							/>
+							<Link href="/">
+								<Image
+									src={LogoPicOriginal}
+									alt="logo image"
+									objectFit="contain"
+								/>
+							</Link>
 						</LogoOriginal>
 
 						<CompanyDescr>{t("descr")};</CompanyDescr>
