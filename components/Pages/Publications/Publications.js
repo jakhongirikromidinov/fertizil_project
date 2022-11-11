@@ -1,3 +1,7 @@
+import Link from "next/link";
+
+import { useRouter } from "next/router";
+
 import { useTranslation } from "next-i18next";
 
 import StyledPublications, {
@@ -30,12 +34,20 @@ const Publications = ({ male }) => {
 
 	const { t } = useTranslation();
 
+	const router = useRouter();
+
+	const handleChangeDirection = () => {
+		router.locale = "ru";
+		console.log(router.locale);
+	};
+
 	return (
 		<StyledPublications male={male}>
 			<Container>
 				<Content male={male}>
 					<Title male={male}>
-						{t("publications:title")}<span>{t("publications:title_span")}</span>
+						{t("publications:title")}
+						<span>{t("publications:title_span")}</span>
 					</Title>
 					<PublicationImage>
 						{PublicationImagesData.map((item, index) => (
