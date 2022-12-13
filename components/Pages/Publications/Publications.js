@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { useRouter } from "next/router";
 
 import { useTranslation } from "next-i18next";
@@ -58,6 +56,7 @@ const Publications = ({ male }) => {
 								height={424}
 								alt="img"
 								onClick={() => handleClick(item, index)}
+								quality={100}
 							/>
 						))}
 						{clickedImg && (

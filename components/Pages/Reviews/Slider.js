@@ -44,9 +44,11 @@ const Slider = () => {
 				}}
 				modules={[Pagination, Autoplay]}
 				className="mySwiper"
+				speed={400}
 				centeredSlides={true}
+				loop={true}
 				initialSlide={1}
-				autoplay={{ delay: 2500, disableOnInteraction: false }}
+				autoplay={{ delay: 4000, disableOnInteraction: false }}
 				breakpoints={{
 					320: {
 						slidesPerView: 1,

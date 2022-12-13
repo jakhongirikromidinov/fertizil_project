@@ -27,7 +27,7 @@ export const Layout = ({ children, footer }) => {
 		<>
 			<Header />
 			<main>{children}</main>
-			{footer && <Footer id="footer" />}
+			{footer && <Footer />}
 		</>
 	);
 };
@@ -254,7 +254,7 @@ export const Modal = ({ clickedImg, handleClick }) => {
 	return (
 		<Overlay>
 			<ImageWrapper>
-				<Image src={clickedImg} layout="fill" objectFit="contain" />
+				<Image src={clickedImg} layout="fill" objectFit="contain" alt="document" />
 				<CloseIcon>
 					<AiOutlineClose className="dismiss" onClick={handleClick} />
 				</CloseIcon>

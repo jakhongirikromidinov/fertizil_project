@@ -51,22 +51,28 @@ export const Navbar = () => {
 				<Content>
 					<Logo>
 						<Link href="/">
-							<Image
-								src={LogoPic}
-								alt="logo image"
-								objectFit="contain"
-								className="transparent"
-							/>
+							<a>
+								<Image
+									src={LogoPic}
+									alt="logo image"
+									className="transparent"
+									quality={100}
+									priority
+								/>
+							</a>
 						</Link>
 					</Logo>
 					<LogoOriginal>
 						<Link href="/">
-							<Image
-								src={LogoPicOriginal}
-								alt="logo image"
-								objectFit="contain"
-								className="original"
-							/>
+							<a>
+								<Image
+									src={LogoPicOriginal}
+									alt="logo image"
+									className="original"
+									quality={100}
+									priority
+								/>
+							</a>
 						</Link>
 					</LogoOriginal>
 					<NavbarList>

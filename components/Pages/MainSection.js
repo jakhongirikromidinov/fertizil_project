@@ -50,6 +50,8 @@ const MainSection = ({ data, type }) => {
 									image="drug box image"
 									width={type === "male" ? "592" : "572"}
 									height={type === "male" ? "348" : "348"}
+									quality={100}
+									alt="drug image"
 								/>
 
 								<DotsWrapperTop type={type}>

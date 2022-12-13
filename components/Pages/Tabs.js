@@ -150,6 +150,7 @@ const Tabs = ({ data, type }) => {
 					alt="drug image box"
 					width="500"
 					height="500"
+					quality={100}
 				/>
 			</DrugImageWrapper>
 		</StyledTabs>

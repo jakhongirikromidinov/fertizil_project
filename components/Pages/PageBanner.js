@@ -50,6 +50,8 @@ const PageBanner = ({ type }) => {
 					width={800}
 					height={630}
 					layout="responsive"
+					quality={100}
+					priority
 				/>
 			</PageBannerImage>
 		</StyledPageBanner>

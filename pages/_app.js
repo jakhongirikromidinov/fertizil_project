@@ -1,7 +1,6 @@
 import GlobalStyle from "../styles/Global.styled";
 import { appWithTranslation } from "next-i18next";
 import Script from "next/script";
-import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
 	return (

@@ -35,12 +35,15 @@ const Footer = () => {
 				<Content>
 					<Company>
 						<LogoOriginal show>
-							<Link href="/">
-								<Image
-									src={LogoPicOriginal}
-									alt="logo image"
-									objectFit="contain"
-								/>
+							<Link href="/female">
+								<a>
+									<Image
+										src={LogoPicOriginal}
+										alt="logo image"
+										objectFit="contain"
+										quality={100}
+									/>
+								</a>
 							</Link>
 						</LogoOriginal>
 
@@ -68,10 +71,7 @@ const Footer = () => {
 
 						<ul>
 							<li>
-								<a href="tel:+998987074922">+998 (98) 707-49-22</a>
-							</li>
-							<li>
-								<a href="tel:+998987074911">+998 (98) 707-49-11</a>
+								<a href="tel:+998977375588">+998 (97) 737-55-88</a>
 							</li>
 						</ul>
 
@@ -91,7 +91,7 @@ const Footer = () => {
 			</Container>
 
 			<CircleWrapper>
-				<Image src={FooterCircle} objectFit="fill" />
+				<Image src={FooterCircle} objectFit="fill" quality={100} alt="" />
 			</CircleWrapper>
 		</StyledFooter>
 	);

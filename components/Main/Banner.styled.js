@@ -97,6 +97,9 @@ export const FamilyImage = styled.div`
 	@media screen and (max-width: 1300px) {
 		right: -100px;
 	}
+	@media screen and (max-height: 719px) {
+		bottom: -250px;
+	}
 	@media screen and (max-width: 1160px) {
 		right: -160px;
 	}
@@ -112,6 +115,11 @@ export const FamilyImage = styled.div`
 	@media screen and (max-width: 600px) {
 		display: none;
 	}
+`;
+export const ImageWrapper = styled.div`
+	width: 1021px;
+	height: 922px;
+	position: relative;
 `;
 
 export const Buttons = styled.div`

@@ -18,6 +18,7 @@ import StyledBanner, {
 	Buttons,
 	BannerButton,
 	FamilyImage,
+	ImageWrapper,
 } from "./Banner.styled";
 
 const Banner = ({ spermIcons }) => {
@@ -51,13 +52,17 @@ const Banner = ({ spermIcons }) => {
 					</Buttons>
 
 					<FamilyImage>
-						<Image
-							src="/images/Banner_happy_family.png"
-							alt="family image"
-							objectFit="contain"
-							width={1021}
-							height={922}
-						/>
+						<ImageWrapper>
+							<Image
+								src="/images/Banner_happy_family.png"
+								alt="family image"
+								objectFit="contain"
+								width={1021}
+								height={922}
+								quality={100}
+								priority
+							/>
+						</ImageWrapper>
 					</FamilyImage>
 				</Content>
 			</Container>

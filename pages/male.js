@@ -7,11 +7,18 @@ import Tabs from "../components/Pages/Tabs";
 import Reviews from "../components/Pages/Reviews/Reviews";
 import Publications from "../components/Pages/Publications/Publications";
 import { Layout } from "../components/common/Common";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
 export default function MalePage() {
+	const router = useRouter();
 	return (
 		<Layout footer>
-			<PageBanner male type="male" />
+			<Head>
+				{router.locale === "uz" && <title>Fertizil M — Erkaklar uchun</title>}
+				{router.locale === "ru" && <title>Fertizil M — Для мужчин</title>}
+			</Head>
+			<PageBanner type="male" />
 			<MainSection data={MaleData} type="male" />
 			<Tabs data={MaleTabsData} type="male" />
 			<Reviews male />
